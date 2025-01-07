@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Plant Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Kaushan+Script&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Kaushan+Script&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="Container w-full h-auto">
+        <div class="header w-full h-auto lg:h-[155px] flex items-center justify-center">
+            <div class="subHeader w-full lg:w-[1170px] h-auto lg:h-[155px] flex items-center justify-between">
+                <div class="hamburger flex lg:hidden ms-[25px] items-center justify-center">
+                    <i class="fa-solid fa-bars text-[#000] text-[30px]"></i>
+                </div>
+                <div class="logo w-[222px] h-[75px] ms-[30px] lg:ms-0">
+                    <img src="Assets/Logo.png">
+                </div>
+                <div class="navLinks w-full lg:w-[725px] h-auto lg:h-[30px] hidden lg:flex items-center justify-evenly">
+                    <a href="#" class="text-[#4da8ae] uppercase font-medium">Home</a>
+                    <a href="#" class="uppercase hover:text-[#4da8ae] font-medium">Type</a>
+                    <a href="#" class="uppercase hover:text-[#4da8ae] font-medium">Flowering month</a>
+                    <a href="#" class="uppercase hover:text-[#4da8ae] font-medium">Colour</a>
+                    <a href="#" class="uppercase hover:text-[#4da8ae] font-medium">Best Sellers</a>
+                    <a href="#" class="uppercase hover:text-[#4da8ae] font-medium">More</a>
+                </div>
+                <div class="searchCart w-[222px] h-auto lg:h-[68px] flex items-center justify-around ms-[20px] lg:ms-0 mr-[30px] lg:mr-0">
+                    <i class="ri-search-line text-[30px] hover:text-[#4da8ae] text-[#616161] cursor-pointer hidden md:flex"></i>
+                    <i class="ri-shopping-bag-4-line text-[32px] hover:text-[#4da8ae] cursor-pointer"></i>
+                    <p class="text-[#343434]">$0.00</p>
+                    <i class="ri-more-2-fill text-[24px] hover:text-[#4da8ae] cursor-pointer"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="dropnav w-full h-[400px] fixed top-[90px] bg-[#000] text-[#fff] flex flex-col justify-around items-center">
+            <a href="#">Home</a>
+            <a href="#">Type</a>
+            <a href="#">Flowering month</a>
+            <a href="#">Colour</a>
+            <a href="#">Best Sellers</a>
+            <a href="#">More</a>
+        </div>
+
+        <div class="heroSection w-full md:h-[527px] bg-[url('Assets/7.jpg')] bg-no-repeat bg-cover bg-center flex items-center justify-center mt-[40px] lg:mt-0">
+            <div class="subHerosection w-full lg:w-[760px] h-[190px] border-4 border-white flex items-center justify-center cursor-pointer">
+                <p class="text-[40px] lg:text-[70px] font-extrabold text-[#fff] uppercase leading-[70px] text-center">trees are green gold</p>
+            </div>
+        </div>
+
+        <div class="flower w-full h-auto lg:h-[740px] flex items-center justify-center mt-[40px] lg:mt-0">
+            <div class="subFlower w-full lg:w-[1170px] h-auto lg:h-[640px] flex flex-col items-center justify-between">
+                <div class="flowerLogo w-full lg:w-[1170px] h-auto lg:h-[122px] flex flex-col items-center">
+                    <p id="heading" class="text-[30px] md:text-[40px] font-medium leading-[40px]">Summer Flowers</p>
+                    <p id="subHeading" class="text-[20px] text-[#b0b0b0] font-semibold">Flower Shop</p>
+                    <img src="Assets/31.png">
+                </div>
+                <div class="flowerLogoCont w-full lg:w-[530px] h-auto lg:h-[50px]">
+                    <p class="font-light text-center p-[30px] lg:p-0">Having trouble picking your flowers from the thousands of varieties available? <br>
+                         Check out our roundup of favorite wedding blossoms</p>
+                </div>
+                <div id="flowerCard" class="flowerCont w-full lg:w-[1170px] h-auto lg:h-[388px] flex flex-wrap lg:flex-nowrap justify-center gap-[20px] p-[30px] lg:p-0"></div>
+            </div>
+        </div>
+
+        <div class="plant w-full h-auto lg:h-[724px] flex items-center justify-center mt-[40px] lg:mt-0">
+            <div class="subPlant w-full lg:w-[1316px] h-auto lg:h-[724px] flex flex-wrap lg:flex-nowrap">
+                <div class="plantCont w-full lg:w-[658px] h-[724px] flex flex-col items-center justify-between cursor-pointer bg-[url('Assets/1.jpg')] bg-no-repeat bg-center bg-cover">
+                    <div class="plantContTtl w-full lg:w-[598px] h-auto lg:h-[86px] mt-[15px]">
+                        <p class="text-[20px] lg:text-[30px] text-[#b0b0b0] font-extrabold tracking-widest uppercase text-center">Best way to say you <br> care</p>
+                    </div>
+                    <div class="plantSubCont w-full lg:w-[598px] h-auto lg:h-[108px] mb-[15px]">
+                        <p class="text-[20px] text-[#343434] font-light text-center leading-[36px] p-[20px] lg:p-0">Heaven beast from fruit give them yielding fowl you sea midst him day tree the over day spirit, abundantly after. Whose years sea kind first divided.</p>
+                    </div>
+                </div>
+                <div class="plantImg w-full lg:w-[658px] h-[724px] bg-[url('Assets/2.jpg')] bg-no-repeat bg-center bg-cover cursor-pointer"></div>
+            </div>
+        </div>
+
+        <div class="art w-full h-auto lg:h-[1260px] flex items-center justify-center mt-[40px] lg:mt-0">
+            <div class="subArt w-full lg:w-[1170px] h-auto lg:h-[1137px] flex flex-col items-center justify-between">
+                <div class="artTtl w-full lg:w-[1170px] h-auto lg:h-[122px] flex flex-col items-center justify-center">
+                    <p id="heading" class="text-[30px] lg:text-[40px] font-medium leading-[40px]">The Art of Romance</p>
+                    <p id="subHeading" class="text-[20px] text-[#b0b0b0] font-semibold">Flower Shop</p>
+                    <img src="Assets/31.png">
+                </div>
+                <div class="artCont w-full lg:w-[1170px] h-auto lg:h-[488px] flex flex-wrap lg:flex-nowrap items-center justify-center p-[30px] lg:p-0">
+                    <div class="artImgCont w-full lg:w-[400px] h-auto lg:h-[488px] flex flex-col items-center justify-center">
+                        <div class="artImg w-[370px] h-[370px]">
+                            <img src="Assets/11.jpg">
+                        </div>
+                        <div class="artCont w-[370px] h-[88px] flex flex-col justify-center items-center lg:items-start gap-[6px]">
+                            <p class="hover:text-[#4da8ae] font-medium">Your Sweet Smile by Teleflora</p>
+                            <p class="text-[20px] font-medium">$49.95</p>
+                        </div>
+                    </div>
+                    <div class="artImgCont w-full lg:w-[400px] h-auto lg:h-[488px] flex flex-col items-center justify-center">
+                        <div class="artImg w-[370px] h-[370px]">
+                            <img src="Assets/22.jpg">
+                        </div>
+                        <div class="artCont w-[370px] h-[88px] flex flex-col justify-center items-center lg:items-start gap-[6px]">
+                            <p class="hover:text-[#4da8ae] font-medium">You're Golden Bouquet by Teleflora</p>
+                            <p class="text-[20px] font-medium">$49.95</p>
+                        </div>
+                    </div>
+                    <div class="artImgCont w-full lg:w-[400px] h-auto lg:h-[488px] flex flex-col items-center justify-center">
+                        <div class="artImg w-[370px] h-[370px]">
+                            <img src="Assets/20.jpg">
+                        </div>
+                        <div class="artCont w-[370px] h-[88px] flex flex-col justify-center items-center lg:items-start gap-[6px]">
+                            <p class="hover:text-[#4da8ae] font-medium">Teleflora's Be Happy Bouquet</p>
+                            <p class="text-[20px] font-medium">$49.95</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="artCont w-full lg:w-[1170px] h-auto lg:h-[488px] flex flex-wrap lg:flex-nowrap items-center justify-center p-[30px] lg:p-0">
+                    <div class="artImgCont w-full lg:w-[400px] h-auto lg:h-[488px] flex flex-col items-center justify-center">
+                        <div class="artImg w-[370px] h-[370px]">
+                            <img src="Assets/22.jpg">
+                        </div>
+                        <div class="artCont w-[370px] h-[88px] flex flex-col justify-center items-center lg:items-start gap-[6px]">
+                            <p id="content" class="hover:text-[#4da8ae] font-medium">Teleflora's Be Happy Bouquet</p>
+                            <p id="content" class="text-[20px] font-medium">$49.95</p>
+                        </div>
+                    </div>
+                    <div class="artImgCont w-full lg:w-[400px] h-auto lg:h-[488px] flex flex-col items-center justify-center">
+                        <div class="artImg w-[370px] h-[370px]">
+                            <img src="Assets/24.jpg">
+                        </div>
+                        <div class="artCont w-[370px] h-[88px] flex flex-col justify-center items-center lg:items-start gap-[6px]">
+                            <p id="content" class="hover:text-[#4da8ae] font-medium">Teleflora's Be Happy Bouquet</p>
+                            <p id="content" class="text-[20px] font-medium">$49.95</p>
+                        </div>
+                    </div>
+                    <div class="artImgCont w-full lg:w-[400px] h-auto lg:h-[488px] flex flex-col items-center justify-center">
+                        <div class="artImg w-[370px] h-[370px]">
+                            <img src="Assets/8.jpg">
+                        </div>
+                        <div class="artCont w-[370px] h-[88px] flex flex-col justify-center items-center lg:items-start gap-[6px]">
+                            <p id="content" class="hover:text-[#4da8ae] font-medium">You're Golden Bouquet by Teleflora</p>
+                            <p id="content" class="text-[20px] font-medium">$49.95</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="review w-full h-auto lg:h-[620px] flex flex-col items-center justify-center mt-[40px] lg:mt-0">
+            <div class="subReview w-full lg:w-[1319px] h-auto lg:h-[482px] flex flex-col items-center">
+                <div class="clientImg w-[170px] h-[170px] rounded-full z-50">
+                    <img src="Assets/25.jpg" class="rounded-full">
+                </div>
+                <div class="clientCont w-full lg:w-[1319px] h-auto lg:h-[380px] mt-[-80px] bg-[#C6E5E0] flex items-center justify-center">
+                    <div class="clientReview w-full lg:w-[923px] h-auto lg:h-[180px] mt-[60px]">
+                        <p class="italic text-[#000] text-center p-[20px] lg:p-0">"The flowers are gorgeous, they made my mother so happy! She kept talking about how beautiful the arrangement is. Amazing speed of delivery, I am very pleased, so much so I'm about tto place another order! Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit." </p>
+                        <p class="text-[20px] font-semibold italic text-center pt-[40px]">John Doe</p>
+                        <p class="text-[#B0B0B5] hover:text-[#4da8ae] text-center">johndoe@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="subReview w-full lg:w-[1319px] h-auto lg:h-[118px] hidden md:flex items-center justify-center mt-[-70px]">
+                <img src="Assets/30.png">
+            </div>
+        </div>
+
+        <div class="blog w-full h-auto lg:h-[676px] flex items-center justify-center mt-[40px] lg:mt-0">
+            <div class="subBlog w-full lg:w-[1170px] h-auto lg:h-[676px] flex flex-col justify-around">
+                <div class="blogTtl w-full lg:w-[1170px] h-auto lg:h-[122px] flex flex-col items-center justify-center">
+                    <p id="heading" class="text-[30px] lg:text-[40px] font-medium leading-[40px]">From Our Blog</p>
+                    <p id="subHeading" class="text-[20px] text-[#b0b0b0] font-semibold">Flower Shop</p>
+                    <img src="Assets/31.png">
+                </div>
+                <div class="blogCont w-full lg:w-[1170px] h-auto lg:h-[504px] flex flex-wrap lg:flex-nowrap justify-center">
+                    <div class="blogContDetail w-full lg:w-[390px] h-auto lg:h-[504px] flex flex-col items-center gap-[10px]">
+                        <div class="blogImg w-[360px] h-[207px]">
+                            <img src="Assets/4.jpg">
+                        </div>
+                        <div class="blogCont w-full lg:w-[360px] h-auto lg:h-[230px] flex flex-col items-center">
+                            <p class="text-[16px] md:text-[20px] font-semibold hover:text-[#4da8ae] pt-[10px] text-center">The Art Of Fresh Flowers</p>
+                            <div class=" w-full lg:w-[365px] h-auto lg:h-[23px] mt-[10px] flex items-center justify-center gap-[18px] p-[20px] lg:p-0">
+                                <p class="text-[12px] text-[#b0b0b0] italic">Oct 03, 2017</p>
+                                <p class="text-[12px] text-[#b0b0b0] italic">By cs-mira-3 Admin</p>
+                                <p class="text-[12px] text-[#b0b0b0] italic">0 Comment(s)</p>
+                            </div>
+                            <p class="text-[14px] text-[#343434] text-center pt-[14px] p-[20px] lg:p-0">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem...</p>
+                            <button class="w-[130px] h-[40px] mt-[25px] rounded-[8px] border border-black hover:bg-[#4da8ae] duration-500 hover:border-none hover:text-[#fff]">READ MORE</button>
+                        </div>
+                    </div>
+                    <div class="blogContDetail w-full lg:w-[390px] h-auto lg:h-[504px] flex flex-col items-center gap-[10px] mt-[20px] lg:mt-0">
+                        <div class="blogImg w-[360px] h-[207px]">
+                            <img src="Assets/3.jpg">
+                        </div>
+                        <div class="blogCont w-full lg:w-[360px] h-auto lg:h-[230px] flex flex-col items-center">
+                            <p class="text-[16px] lg:text-[20px] font-semibold hover:text-[#4da8ae] pt-[10px] text-center">Evolution of Flowers</p>
+                            <div class=" w-full lg:w-[365px] h-auto lg:h-[23px] mt-[10px] flex items-center justify-center gap-[18px] p-[20px] lg:p-0">
+                                <p class="text-[12px] text-[#b0b0b0] italic">Oct 03, 2017</p>
+                                <p class="text-[12px] text-[#b0b0b0] italic">By cs-mira-3 Admin</p>
+                                <p class="text-[12px] text-[#b0b0b0] italic">0 Comment(s)</p>
+                            </div>
+                            <p class="text-[14px] text-[#343434] text-center pt-[14px] p-[20px] lg:p-0">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem...</p>
+                            <button class="w-[130px] h-[40px] mt-[25px] rounded-[8px] border border-black hover:bg-[#4da8ae] duration-500 hover:border-none hover:text-[#fff]">READ MORE</button>
+                        </div>
+                    </div>
+                    <div class="blogContDetail w-full lg:w-[390px] h-auto lg:h-[504px] flex flex-col items-center gap-[10px] mt-[20px] lg:mt-0">
+                        <div class="blogImg w-[360px] h-[207px]">
+                            <img src="Assets/5.jpg">
+                        </div>
+                        <div class="blogCont w-full lg:w-[360px] h-auto lg:h-[230px] flex flex-col items-center">
+                            <p class="text-[20px] font-semibold hover:text-[#4da8ae] pt-[10px] text-center">Evolution of Flowers</p>
+                            <div class="w-full lg:w-[365px] h-auto lg:h-[23px] mt-[10px] flex items-center justify-center gap-[18px] p-[20px] lg:p-0">
+                                <p class="text-[12px] text-[#b0b0b0] italic">Oct 03, 2017</p>
+                                <p class="text-[12px] text-[#b0b0b0] italic">By cs-mira-3 Admin</p>
+                                <p class="text-[12px] text-[#b0b0b0] italic">0 Comment(s)</p>
+                            </div>
+                            <p class="text-[14px] text-[#343434] text-center pt-[14px] p-[20px] lg:p-0">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem...</p>
+                            <button class="w-[130px] h-[40px] mt-[25px] rounded-[8px] border border-black hover:bg-[#4da8ae] duration-500 hover:border-none hover:text-[#fff]">READ MORE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flowerInsta w-full h-[90px] mt-[40px] lg:mt-0">
+             <p id="subHeading" class="text-[30px] lg:text-[40px] font-semibold leading-[40px] text-center">Flower Instagram</p>   
+        </div>
+
+        <div class="newsletter w-full h-auto lg:h-[245px] flex items-center justify-center bg-[#F4F4F4]">
+            <div class="subNewsletter w-full lg:w-[1170px] h-auto lg:h-[185px] flex flex-col items-center justify-between">
+                <div class="newsletterTtl w-full lg:w-[1170px] h-auto lg:h-[57px]">
+                    <p id="subHeading" class="text-[25px] lg:text-[40px] font-semibold leading-[57px] text-center">Subscribe for Newsletter</p>
+                </div>
+                <div class="subTtl w-full lg:w-[1170px] h-auto lg:h-[24px]">
+                    <p class="text-[#b0b0b0] text-center p-[20px] lg:p-0">You likeness gathered. Whales don't there air subdue fish darkness created isn't herb first whales is. Fly. Dry it dominion.</p>
+                </div>
+                <div class="mail w-full lg:w-[750px] h-auto lg:h-[50px] border-b-2 border-[#CDCDCD] flex justify-around p-[20px] lg:p-0">
+                    <input type="email" placeholder="Your email..." class="w-[600px] h-[48px] placeholder:italic ps-[14px] outline-none bg-transparent">
+                    <div class="sendIcon w-[85px] h-[48px] flex items-center justify-center gap-[8px]">
+                        <p class="text-[14px] font-extrabold text-[#4da8ae]">SEND</p>
+                        <i class="ri-send-plane-fill text-[24px] text-[#4da8ae]"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer w-full h-auto lg:h-[325px] bg-[#F4F4F4] flex items-center justify-center">
+            <div class="subFooter w-full lg:w-[1200px] h-auto lg:h-[225px] flex flex-wrap lg:flex-nowrap p-[30px] lg:p-0">
+                <div class="store w-full lg:w-[300px] h-auto lg:h-[225px] flex flex-col items-center gap-[25px]">
+                    <div class="storeTtl w-[270px] h-[20px]">
+                         <p class="text-[20px] text-[#343434] font-semibold leading-[20px]">Flant Store</p>
+                    </div>
+                    <div class="storeCont w-[270px] h-[67px]">
+                        <p class="text-[14px] text-[#343434]">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin. Duis sed odio sit amet nibh vulputate cursus a sit amet.</p>
+                    </div>
+                    <div class="storeLink w-[270px] h-[50px] flex flex-col">
+                        <a href="#" class="text-[14px] text-[#4da8ae] hover:underline">About Us</a>
+                        <a href="#" class="text-[14px] text-[#4da8ae] hover:underline">Store Locator</a>
+                    </div>
+                </div>
+                <div class="contact w-full lg:w-[300px] h-auto lg:h-[225px] flex flex-col items-center mt-[20px] lg:mt-0">
+                    <div class="contactTtl w-[270px] h-[20px]">
+                        <p class="text-[20px] text-[#343434] font-semibold leading-[20px]">Contact Us</p>
+                    </div>
+                    <div class="location w-[270px] h-[22px] mt-[35px] flex justify-between items-center">
+                        <i class="ri-map-pin-line text-[22px] leading-[22px]"></i>
+                        <p class="text-[14px] text-[#343434]">No 1104 Sky Tower, Las Vegas, USA</p>
+                    </div>
+                    <div class="phone w-[270px] h-[22px] mt-[15px] flex items-center">
+                        <i class="ri-phone-line text-[22px] leading-[22px]"></i>
+                        <p class="text-[14px] text-[#343434] hover:text-[#4da8ae] ps-[28px]">(084) 0123 456 789</p>
+                    </div>
+                    <div class="mail w-[270px] h-[22px] mt-[15px] flex items-center">
+                        <i class="ri-mail-line text-[22px] leading-[22px]"></i>
+                        <p class="text-[14px] text-[#343434] hover:text-[#4da8ae] ps-[28px]">contac@yourcompany.com</p>
+                    </div>
+                </div>
+                <div class="post w-full lg:w-[300px] h-auto lg:h-[225px] flex flex-col items-center mt-[20px] lg:mt-0">
+                    <div class="postTtl w-[270px] h-[20px]">
+                        <p class="text-[20px] text-[#343434] font-semibold leading-[20px]">Recent Post</p>
+                    </div>
+                    <div class="postCont w-[270px] h-[57px] mt-[35px] flex">
+                        <div class="postImg w-[100px] h-[57px]">
+                            <img src="Assets/14.jpg">
+                        </div>
+                        <div class="postImgCont w-[170px] h-[45px]">
+                            <p class="text-[14px] hover:text-[#4da8ae] hover:underline cursor-pointer ps-[12px]">The Art Of Fresh Flowers</p>
+                            <p class="text-[12px] text-[#4da8ae] ps-[12px] pt-[4px] italic">Oct 03, 2017</p>
+                        </div>
+                    </div>
+                    <div class="postCont w-[270px] h-[57px] mt-[25px] flex">
+                        <div class="postImg w-[100px] h-[57px]">
+                            <img src="Assets/3.jpg">
+                        </div>
+                        <div class="postImgCont w-[170px] h-[45px]">
+                            <p class="text-[14px] hover:text-[#4da8ae] hover:underline cursor-pointer ps-[12px]">Evolution of Flowers</p>
+                            <p class="text-[12px] text-[#4da8ae] ps-[12px] pt-[4px] italic">Oct 03, 2017</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="account w-full lg:w-[300px] h-auto lg:h-[225px] flex flex-col items-center mt-[20px] lg:mt-0">
+                    <div class="accountTtl w-[270px] h-[20px]">
+                        <p class="text-[20px] text-[#343434] font-semibold leading-[20px]">My Account</p>
+                    </div>
+                    <div class="accountLinks w-[270px] h-[140px] mt-[35px] flex">
+                        <div class="links w-[135px] h-[140px] flex flex-col justify-between">
+                            <a href="#" class="text-[14px] hover:text-[#4da8ae] hover:underline">My Account</a>
+                            <a href="#" class="text-[14px] hover:text-[#4da8ae] hover:underline">Order History</a>
+                            <a href="#" class="text-[14px] hover:text-[#4da8ae] hover:underline">Wish List</a>
+                            <a href="#" class="text-[14px] hover:text-[#4da8ae] hover:underline">Newsletter</a>
+                        </div>
+                        <div class="links w-[135px] h-[140px] flex flex-col justify-between">
+                            <a href="#" class="text-[14px] hover:text-[#4da8ae] hover:underline">Brands</a>
+                            <a href="#" class="text-[14px] hover:text-[#4da8ae] hover:underline">Gift Certificates</a>
+                            <a href="#" class="text-[14px] hover:text-[#4da8ae] hover:underline">Affiliates</a>
+                            <a href="#" class="text-[14px] hover:text-[#4da8ae] hover:underline">Specials</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright w-full h-auto lg:h-[70px] flex items-center justify-center">
+            <div class="subCopyright w-full lg:w-[1170px] h-auto lg:h-[20px] flex flex-col lg:flex-row items-center justify-between">
+                <div class="menu w-full lg:w-[525px] h-auto lg:h-[20px] flex flex-col lg:flex-row items-center justify-between">
+                    <a href="#" class="text-[14px] hover:text-[#4da8ae] hover:underline">Home</a>
+                    <a href="#" class="text-[14px] hover:text-[#4da8ae] hover:underline">New Products</a>
+                    <a href="#" class="text-[14px] hover:text-[#4da8ae] hover:underline">Bestseller Products</a>
+                    <a href="#" class="text-[14px] hover:text-[#4da8ae] hover:underline">Sale Products</a>
+                    <a href="#" class="text-[14px] hover:text-[#4da8ae] hover:underline">About Us</a>
+                </div>
+                <div class="mainCopyright w-full lg:w-[260px] h-auto lg:h-[20px] cursor-pointer mt-[20px] lg:mt-0">
+                    <p class="text-[14px] text-[#343434] text-center">Copyright © 2025 <span class="font-semibold hover:text-[#4da8ae] hover:underline">Mira 3 Shopify Theme</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="Jquery.js"></script>
+<script>
+
+    $(document).ready(function(){
+        $(".dropnav").hide()
+
+        $(".hamburger").click(function(){
+            $(".dropnav").fadeToggle();
+        })
+    })
+
+    let images = [
+        "https://cs-mira-3.myshopify.com/cdn/shop/products/16_2fe55d1f-a4b7-4c29-94bc-b402e874f2f9_400x_crop_center.jpg",
+        "https://cs-mira-3.myshopify.com/cdn/shop/products/20_6383fe75-c1d2-46f8-97e2-06d7d65d5c7b_400x_crop_center.jpg",
+        "https://cs-mira-3.myshopify.com/cdn/shop/products/24_400x_crop_center.jpg",
+        "https://cs-mira-3.myshopify.com/cdn/shop/products/16_4d87e59b-fa50-452c-bace-bd1ef6d6b484_400x_crop_center.jpg"
+    ]
+    
+    function card(i)
+    {
+        let flowerCard = document.getElementById("flowerCard")
+
+        let card = document.createElement("div")
+        card.setAttribute("class", "card")
+
+        let cardImg = document.createElement("img")
+        cardImg.setAttribute("src", images[i])
+
+        let cardName = document.createElement("div")
+        cardName.setAttribute("class", "card")
+
+        let cardTtl = document.createElement("h4")
+        cardTtl.innerText = "Swiss cheese"
+        cardTtl.setAttribute("class", "font-bold text-[18px] pt-[10px]")
+
+        let cardPrice = document.createElement("p")
+        cardPrice.innerText = "$49.95"
+        cardPrice.setAttribute("class", "text-[22px]")
+
+        card.append(cardImg)
+        card.append(cardName)
+        cardName.append(cardTtl)
+        cardName.append(cardPrice)
+        flowerCard.append(card)
+    }
+
+    for(let i = 0; i < images.length; i++)
+    {
+        card(i);
+    }
+
+
+</script>
+</html>
