@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Password Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <center>
+        <form action="#" id="formSubmit">
+            <h2>Change Password</h2>
+            <input type="password" id="oldPsw" placeholder="Old Password" required> <br> <br>
+            <input type="password" id="newPsw" placeholder="New Password" required> <br><br>
+            <input type="password" id="confirmPsw" placeholder="Confirm Password" required> <br><br>
+            <input type="submit" id="submit">
+        </form>
+
+        <p id="oldPswError"></p>
+        <p id="newPswError"></p>
+        <p id="confirmPswError"></p>
+    </center>
+
+</body>
+<script>
+    let oldPsw = "Secure@123"
+
+    document.getElementById("formSubmit").addEventListener("submit" , function(e){
+
+        e.preventDefault();
+
+        // Get the values
+        let OldPsw =  document.getElementById("oldPsw").value;
+        let NewPsw = document.getElementById("newPsw").value;
+        let ConfirmPsw = document.getElementById("confirmPsw").value;
+
+        // clear previous error messages
+        document.getElementById("oldPswError").innerText = " ";
+        document.getElementById("newPswError").innerText = " ";
+        document.getElementById("confirmPswError").innerText = " ";
+
+        // check if old password is correct or not
+        if (oldPsw != OldPsw) 
+        {
+            document.getElementById("oldPswError").innerText = "Old password incorrect...!!";
+        }
+
+        // check the new password is longer than 6 characters
+        if (NewPsw.length <= 6) 
+        {
+            document.getElementById("newPswError").innerText = "New password must be at least 6 characters!"
+        }
+
+        // check new password & confirm password match or not
+        if (NewPsw != ConfirmPsw) 
+        {
+            document.getElementById("confirmPswError").innerText = "New password do not match!"   
+        }
+
+        // if all conditions are true, show success message
+        if (oldPsw == OldPsw && NewPsw.length > 6 && NewPsw == ConfirmPsw) 
+        {
+            alert("Password successfully changed!!!")    
+        }
+
+        // after form submission, empty the input fields
+        document.getElementById("oldPsw").value = "";
+        document.getElementById("newPsw").value = "";
+        document.getElementById("confirmPsw").value = "";
+    })
+
+</script>
+</html>
