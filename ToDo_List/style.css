@@ -7,7 +7,8 @@
     font-family: "Noto Sans", serif;
 }
 
-body {
+body 
+{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,12 +16,14 @@ body {
     background-color: #87CEEB;
 }
 
-.mainContainer {
+.mainContainer 
+{
     width: auto;
     height: auto;
 }
 
-.mainContainer .container {
+.mainContainer .container 
+{
     background-color: #fff;
     padding: 30px;
     border-radius: 10px;
@@ -30,7 +33,8 @@ body {
     height: auto;
 }
 
-.container h2 {
+.container h2 
+{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,13 +42,15 @@ body {
     gap: 10px;
 }
 
-form {
+form 
+{
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.input-box {
+.input-box 
+{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -56,7 +62,8 @@ form {
     height: 50px;
 }
 
-.input-box input {
+.input-box input 
+{
     border: none;
     outline: none;
     background: transparent;
@@ -65,7 +72,8 @@ form {
     flex: 1;
 }
 
-#add-btn {
+#add-btn 
+{
     background: #32CD32;
     color: #000;
     border: none;
@@ -76,7 +84,8 @@ form {
     cursor: pointer;
 }
 
-.message {
+.message 
+{
     color: #098647;
     font-size: 12px;
     font-weight: bold;
@@ -84,13 +93,15 @@ form {
     text-align: center;
 }
 
-.mainToDoList {
+.mainToDoList 
+{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.todo-item {
+.todo-item 
+{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -100,24 +111,28 @@ form {
     background: #EDEEF0;
 }
 
-.todo-item span {
+.todo-item span 
+{
     display: flex;
     gap: 15px;
 }
 
-.todo-item button {
+.todo-item button 
+{
     background: none;
     border: none;
     cursor: pointer;
     font-size: 16px;
 }
 
-.button-group {
+.button-group 
+{
     display: flex;
     gap: 15px; 
 }
 
-.button-group button {
+.button-group button 
+{
     border: none;
     background: none;
     cursor: pointer;

@@ -8,8 +8,6 @@ plusIcon.addEventListener("click", function (e)
     let newTask = document.createElement("div");
     newTask.classList.add("todo-item");
 
-    console.log(newTask)
-
     let taskText = document.createElement("span");
     taskText.textContent = task_description.value;
 
