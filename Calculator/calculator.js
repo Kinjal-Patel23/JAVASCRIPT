@@ -12,6 +12,7 @@ console.log("Modulus: ", magic_num % 3000);
 console.log("----------------------------------");
 
 //swaping - Tapu Sena Ka Fun Experiment!
+
 console.log("Two number Swaping: \n");
 let n1 = magic_num;
 let n2 = 3000;
@@ -20,6 +21,7 @@ console.log("n1: ", n1);
 console.log("n2: ", n2);
 
 // swapping withoute third variable
+
 console.log("Before Swapping: n1 = ", n1, "n2 = ", n2);
 
 n1 = n1 + n2; // 40000 + 3000 = 43000
@@ -31,6 +33,7 @@ console.log("After Swapping: n1 = ", n1, "n2 = ", n2);
 console.log("----------------------------------");
 
 // grading system - Bhide Sir Ke Students Ka Result!
+
 const marks = 86;
 let grade;
 
