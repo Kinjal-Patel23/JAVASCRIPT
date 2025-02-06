@@ -12,8 +12,10 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #87CEEB;
+    min-height: 100vh;
+    /* background-color: #87CEEB; */
+    background: rgb(192,49,144);
+    background: linear-gradient(65deg, rgba(192,49,144,1) 0%, rgba(131,99,187,1) 100%);
 }
 
 .mainContainer 
@@ -24,10 +26,12 @@ body
 
 .mainContainer .container 
 {
-    background-color: #fff;
+    /* background-color: #fff; */
+    background-color: #AB5CAE;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     text-align: center;
     width: 480px;
     height: auto;
@@ -56,7 +60,7 @@ form
     justify-content: space-between;
     background: #f1f1f1;
     padding-left: 15px;
-    border-radius: 50px;
+    border-radius: 10px;
     margin: 15px 0;
     background-color: #EDEEF0;
     height: 50px;
@@ -74,19 +78,19 @@ form
 
 #add-btn 
 {
-    background: #32CD32;
-    color: #000;
+    background: #FF6B6B;
+    color: #fff;
     border: none;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
+    width: 49px;
+    height: 50px;
+    border-radius: 10px;
     font-size: 30px;
     cursor: pointer;
 }
 
 .message 
 {
-    color: #098647;
+    color: #fff;
     font-size: 12px;
     font-weight: bold;
     margin-top: 10px;
@@ -98,6 +102,8 @@ form
     display: flex;
     flex-direction: column;
     gap: 10px;
+    max-height: 300px;
+    overflow-y: auto;
 }
 
 .todo-item 
@@ -105,10 +111,10 @@ form
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
     border-radius: 5px;
     margin-bottom: 5px;
-    background: #EDEEF0;
+    background: #BC7DC0;
 }
 
 .todo-item span 
@@ -123,6 +129,11 @@ form
     border: none;
     cursor: pointer;
     font-size: 16px;
+}
+
+.todo-item button:hover
+{
+    color: #FF6B6B;
 }
 
 .button-group 
