@@ -18,11 +18,11 @@ plusIcon.addEventListener("click", function (e)
     editBtn.setAttribute("type", "button");
     editBtn.innerHTML = '<i class="fa-solid fa-pencil"></i>';
 
-    // editBtn.addEventListener("click", function(e){
-    //     let editText = taskText.textContent;
+    editBtn.addEventListener("click", function(e){
+        let editText = prompt("Enter a updated message...", taskText.textContent);
+        taskText.textContent = editText;
         
-    // });
-
+    });
 
     let deleteBtn = document.createElement("button");
     deleteBtn.setAttribute("type", "button");
