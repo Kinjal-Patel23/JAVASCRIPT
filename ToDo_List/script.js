@@ -9,7 +9,7 @@ plusIcon.addEventListener("click", function (e)
     newTask.classList.add("todo-item");
 
     let taskText = document.createElement("span");
-    taskText.textContent = task_description.value;
+    taskText.innerText = task_description.value;
 
     let mainButton = document.createElement("div");
     mainButton.classList.add("button-group"); 
@@ -19,8 +19,8 @@ plusIcon.addEventListener("click", function (e)
     editBtn.innerHTML = '<i class="fa-solid fa-pencil"></i>';
 
     editBtn.addEventListener("click", function(e){
-        let editText = prompt("Enter a updated message...", taskText.textContent);
-        taskText.textContent = editText;
+        let editText = prompt("Enter a updated message...");
+        taskText.innerText = editText;
         
     });
 
