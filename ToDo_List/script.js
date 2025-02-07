@@ -1,7 +1,7 @@
 
 let plusIcon = document.getElementById("add-btn"); 
 let task_description = document.getElementById("task"); 
-let taskList = document.getElementsByClassName("mainToDoList")[0]; 
+let taskList = document.getElementById("mainToDoList"); 
 
 plusIcon.addEventListener("click", function (e) 
 {
