@@ -1,4 +1,3 @@
-
 let plusIcon = document.getElementById("add-btn"); 
 let task_description = document.getElementById("task"); 
 let taskList = document.getElementById("mainToDoList"); 
