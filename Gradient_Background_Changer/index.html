@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Background Changer</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+        
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            transition: background-color 0.5s;
+        }
+        .container {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        #click {
+            padding: 15px 30px;
+            font-size: 18px;
+            font-family: 'Pacifico', cursive;
+            color: white;
+            background-color: #444;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.3s;
+        }
+        #click:hover {
+            background-color: #555;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="click">Random Color</button>
+    </div>
+</body>
+<script>
+    
+    function color()
+    {
+        let letter = "0123456789ABCDEF"
+
+        let newColor = "#";
+
+        for (let i = 0; i < 6; i++) 
+        {
+            newColor += letter[Math.floor(Math.random() * 16)]; 
+            console.log(newColor);
+        }
+
+        return newColor;
+    }
+    
+    document.getElementById("click").addEventListener("click", function(e){
+        let color1 = color();
+        let color2 = color();
+        let color3 = color();
+        document.body.style.background = `radial-gradient(circle, ${color1}, ${color2}, ${color3})`;
+        // document.body.style.background = `linear-gradient(to right, ${color1}, ${color2}, ${color3})`;
+    })
+
+</script>
+</html>
