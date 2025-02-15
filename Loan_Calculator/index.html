@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>EMI Calculator</h2>
+        
+        <div class="input-container">
+            <label>Loan Amount:</label>
+            <input type="text" placeholder="₹" id="loanAmount" oninput="calculateEMI()">
+        </div>
+        
+        <div class="input-container">
+            <label>Rate of Interest (p.a):</label>
+            <input type="text" placeholder="%" id="interestRate" oninput="calculateEMI()">
+        </div>
+        
+        <div class="input-container">
+            <label>Loan Tenure:</label>
+            <input type="text" placeholder="Yr" id="loanTenure" oninput="calculateEMI()">
+        </div>
+        
+        <div class="results">
+            <p>Monthly EMI: <span id="emi">0</span></p>
+            <p>Principal Amount: <span id="principal">0</span></p>
+            <p>Total Interest: <span id="totalInterest">0</span></p>
+            <p class="total-amount">Total Amount: <span id="totalAmount">0</span></p>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
