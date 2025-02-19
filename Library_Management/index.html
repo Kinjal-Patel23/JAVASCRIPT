@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="library-container">
+        <h1>Library Management System</h1>
+        
+        <div class="form-container">
+            <input type="text" id="bookTitle" class="bookTtl" placeholder="Enter Book Title">
+            <input type="text" id="bookAuthor" class="bookAuth" placeholder="Enter Book Author">
+            <input type="text" id="bookImage" class="bookImg" placeholder="Enter Image URL">
+            <button id="addBtn">Add Book</button>
+        </div>
+        
+        <div class="search-container">
+            <input type="text" id="searchBook" class="searchBox" onkeyup="searchBtn()" placeholder="Search by title or author">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        
+        <h2>Available Books</h2>
+        <div class="book-list" id="bookList">
+            <div class="book-card">
+                <div class="book-title">Atomic Habits</div>
+                <div class="book-author">James Clear</div>
+                <img class="book-image" src="https://static.toiimg.com/photo/106221101/106221101.jpg">
+            </div>
+            <div class="book-card">
+                <div class="book-title">The Alchemist</div>
+                <div class="book-author">Paulo Coelho</div>
+                <img class="book-image" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1483412266i/865.jpg">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
