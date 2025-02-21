@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex justify-center items-center h-screen bg-gradient-to-br from-[#4b79a1] to-[#283e51]">
+    <div class="w-[350px] bg-white p-8 rounded-xl shadow-lg text-center">
+        <h2 class="text-gray-800 text-2xl font-semibold mb-4">Countdown & Quotes</h2>
+        
+        <div class="flex justify-center gap-3 mb-5">
+            <input type="number" placeholder="Enter minutes....." id="numInput"
+                class="w-[180px] h-[45px] px-4 border-2 border-[#4b79a1] rounded-md text-lg outline-none">
+            <button id="numBtn" onclick="btnCount()"
+                class="w-[80px] h-[45px] bg-[#4b79a1] text-white rounded-md text-lg font-medium transition duration-300 hover:bg-[#283e51]">
+                Start
+            </button>
+        </div>
+
+        <h1 id="count" class="text-[#4b79a1] text-3xl font-bold mt-4"></h1>
+        <p id="quote" class="text-gray-700 text-lg mt-3"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
