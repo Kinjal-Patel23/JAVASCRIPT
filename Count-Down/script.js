@@ -13,13 +13,13 @@ function btnCount() {
         "The future starts today, not tomorrow."
     ]
 
-    let minutes = document.getElementById("numInput").value;
+    let seconds = document.getElementById("numInput").value;
     let display = document.getElementById("count");
     let displayQuotes = document.getElementById("quote");
 
-    let totalSec = minutes * 60;
+    let totalSec = Number(seconds);
 
-    if(minutes <= 0)
+    if(seconds <= 0)
     {
         display.innerText = "Enter valid input";
         return;
@@ -44,7 +44,7 @@ function btnCount() {
         if (totalSec <= 0) 
         {
             clearInterval(counter);
-            displayQuotes.innerText = quotes[Math.floor(Math.random() * quotes.length)]    
+            displayQuotes.innerText = quotes[Math.floor(Math.random() * 10)]    
         }
         totalSec--;
         
