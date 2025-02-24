@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="form-container">
+        <div class="icon-container">
+            <i class="fa-solid fa-camera"></i>
+        </div>
+        <form id="myForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <div class="button-group">
+                <button type="submit">Submit</button>
+                <button type="reset" class="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+
+    let userForm = document.getElementById("myForm");
+
+    userForm.addEventListener("submit", function(e){
+        
+        e.preventDefault();
+
+        let username = document.getElementById("username").value;
+        let email = document.getElementById("email").value;
+
+        let userArr = [{username:username, email:email}];
+
+        let data = localStorage.setItem("user", JSON.stringify(userArr));
+
+
+        window.location.href = "data.html";
+
+    })
+
+</script>
+</html>
