@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: black;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+.expense-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.expense-form input, .expense-form select {
+    width: 500px;
+    max-width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    background-color: white;
+    color: black;
+}
+
+.expense-form button {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 15px;
+    width: 150px;
+    max-width: 100%;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.expense-list {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.expense-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.expense-list li {
+    background: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+.expense-list button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.total-expense {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .container {
+    background: #1e1e1e;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode h1, 
+.dark-mode .total-expense,
+.dark-mode .expense-list li {
+    color: white;
+}
+
+.dark-mode .expense-form input, 
+.dark-mode .expense-form select {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+.dark-mode .expense-list li {
+    background: #333;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+#darkModeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dark-mode #darkModeToggle {
+    background: white;
+    color: black;
+}
