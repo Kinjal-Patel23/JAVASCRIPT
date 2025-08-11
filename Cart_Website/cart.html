@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+        integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="Container w-full h-auto">
+        <div class="top-bar w-full h-auto lg:h-[40px] bg-[#000] flex items-center justify-center">
+            <div class="subTopbar1 w-full md:w-[585px] h-[40px] flex gap-[10px]">
+                <div class="relative w-[75px] h-[40px] text-white flex items-center justify-center">
+                    <select
+                        class="w-full h-full bg-transparent text-[#ccc] font-semibold text-[12px] text-center border-none outline-none appearance-none cursor-pointer flex items-center">
+                        <option class="text-black" value="USD">USD</option>
+                        <option class="text-black" value="EUR">EUR</option>
+                        <option class="text-black" value="INR">INR</option>
+                        <option class="text-black" value="GBP">GBP</option>
+                        <option class="text-black" value="CAD">CAD</option>
+                    </select>
+                    <div class="absolute right-2 pointer-events-none">
+                        <i class="ri-arrow-down-s-fill"></i>
+                    </div>
+                </div>
+                <div class="signIn w-[43px] h-[40px] flex items-center justify-center">
+                    <p class="text-[12px] text-[#ccc] font-semibold cursor-pointer">Sign in</p>
+                </div>
+            </div>
+
+            <div class="subTopbar2 w-full md:w-[585px] h-[40px] flex justify-end gap-[15px]">
+                <div class="relative flex items-center cursor-pointer">
+                    <input id="searchInput" type="text" placeholder="Search something....."
+                        class="absolute right-12 w-0 opacity-0 h-[40px] px-3 text-black text-[12px] bg-white border border-gray-300 rounded-[10px] transition-all duration-300 focus:outline-none">
+
+                    <div id="searchIcon"
+                        class="search w-[40px] h-[40px] flex items-center justify-center cursor-pointer">
+                        <img src="Assets/icon-search.png" class="cursor-pointer w-5 h-5">
+                    </div>
+                </div>
+
+                <a href="cart.html"
+                    class="cart w-[40px] h-[40px] flex items-center justify-center relative cursor-pointer lg:mr-0 mr-[20px]">
+                    <img src="Assets/bg-cart.png">
+                    <span
+                        class="absolute top-0 right-0 bg-red-400 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">0</span>
+                </a>
+            </div>
+        </div>
+        
+        
+        <div class="header w-full h-[95px] bg-[#000] flex items-center justify-center">
+            <div class="subHeader w-[1170px] h-[95px] flex justify-between items-center">
+                <div class="headerLogo w-[159px] h-[55px] cursor-pointer ms-[30px] lg:ms-0">
+                    <img src="Assets/logo.png">
+                </div>
+                <div class="navLinks w-[642px] h-[55px] hidden lg:flex items-center justify-around">
+                    <a href="index.html" class="text-[11px] text-[#a7a4a4] font-semibold tracking-wider">HOME</a>
+                    <div class="relative group">
+                        <a href="#"
+                            class="text-[11px] text-[#fff] font-semibold hover:text-[#a7a4a4] tracking-wider flex items-center">
+                            SHOP<i class="ri-arrow-down-s-line ml-1"></i>
+                        </a>
+                        <div
+                            class="absolute left-0 top-[50px] w-[150px] bg-[#222222] text-[#a7a4a4] pt-[10px] flex flex-col opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <p
+                                class="text-[12px] font-bold text-white mb-2 border-b border-gray-500 w-full pb-1 text-center">
+                                SHOP</p>
+                            <a href="#"
+                                class="block text-[11px] py-2 w-full text-center hover:text-white border-b border-gray-500 uppercase">shorts</a>
+                            <a href="#"
+                                class="block text-[11px] py-2 w-full text-center hover:text-white border-b border-gray-500 uppercase">dresses</a>
+                            <a href="#"
+                                class="block text-[11px] py-2 w-full text-center hover:text-white border-b border-gray-500 uppercase">trousers</a>
+                            <a href="#"
+                                class="block text-[11px] py-2 w-full text-center hover:text-white border-b border-gray-500 uppercase">skirts</a>
+                            <a href="#"
+                                class="block text-[11px] py-2 w-full text-center hover:text-white uppercase">jeans</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="#"
+                            class="text-[11px] text-[#fff] font-semibold hover:text-[#a7a4a4] tracking-wider flex items-center">
+                            TEMPLATES <i class="ri-arrow-down-s-line ml-1"></i>
+                        </a>
+                        <div class="absolute left-[50%] top-[50px] w-[1170px] h-[300px] bg-[#222222] text-[#a7a4a4] p-6 flex items-center justify-around opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 shadow-lg transform -translate-x-[64%] z-50"
+                            style="background: url('Assets/mega-bg-01.png') no-repeat center/cover;">
+                            <div class="w-[200px] h-[230px] flex flex-col justify-around">
+                                <p class="text-[12px] font-bold text-white mb-2 pb-1 uppercase tracking-widest">
+                                    Accessories</p>
+                                <a href="#" class="block text-[11px] py-2 hover:text-white font-semibold">JEWELLERY</a>
+                                <a href="#" class="block text-[11px] py-2 hover:text-white font-semibold">SUNGLASSES</a>
+                                <a href="#" class="block text-[11px] py-2 hover:text-white font-semibold">SCARVES</a>
+                                <a href="#" class="block text-[11px] py-2 hover:text-white font-semibold">HEADWEAR</a>
+                            </div>
+                            <div class="w-[200px] h-[230px] flex flex-col justify-around">
+                                <p class="text-[12px] font-bold text-white mb-2 pb-1 uppercase tracking-widest">Sample
+                                </p>
+                                <a href="#" class="block text-[11px] py-2 hover:text-white uppercase font-semibold">All
+                                    Collections</a>
+                                <a href="#" class="block text-[11px] py-2 hover:text-white uppercase font-semibold">All
+                                    Products</a>
+                                <a href="#" class="block text-[11px] py-2 hover:text-white uppercase font-semibold">Blog
+                                    Post</a>
+                                <a href="#"
+                                    class="block text-[11px] py-2 hover:text-white uppercase font-semibold">Shopping
+                                    Cart</a>
+                            </div>
+                            <div class="w-[200px] h-[230px] flex flex-col justify-around">
+                                <p class="text-[12px] font-bold text-white mb-2 pb-1 uppercase">footer link 2</p>
+                                <a href="#"
+                                    class="block text-[11px] py-2 hover:text-white uppercase font-semibold">Store
+                                    location</a>
+                                <a href="#" class="block text-[11px] py-2 hover:text-white uppercase font-semibold">Site
+                                    map</a>
+                                <a href="#"
+                                    class="block text-[11px] py-2 hover:text-white uppercase font-semibold">newsletter</a>
+                                <a href="#"
+                                    class="block text-[11px] py-2 hover:text-white uppercase font-semibold">contact
+                                    us</a>
+                            </div>
+                            <div class="w-[200px] h-[230px] flex flex-col justify-around">
+                                <p class="text-[12px] font-bold text-white mb-2 pb-1 uppercase">Pages</p>
+                                <a href="#"
+                                    class="block text-[11px] py-2 hover:text-white uppercase font-semibold">About us</a>
+                                <a href="#"
+                                    class="block text-[11px] py-2 hover:text-white uppercase font-semibold">Contact
+                                    us</a>
+                                <a href="#"
+                                    class="block text-[11px] py-2 hover:text-white uppercase font-semibold">lookbook</a>
+                                <a href="#"
+                                    class="block text-[11px] py-2 hover:text-white uppercase font-semibold">faqs</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="#"
+                            class="text-[11px] text-[#fff] font-semibold hover:text-[#a7a4a4] tracking-wider flex items-center">
+                            MEGA MENU <i class="ri-arrow-down-s-line ml-1"></i>
+                        </a>
+                        <div class="absolute left-[50%] top-[55px] w-[1170px] h-[400px] bg-[#222222] text-[#a7a4a4] p-6 flex justify-around opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 shadow-lg transform -translate-x-[74%] z-50"
+                            style="background: url('Assets/mega-bg-02.png') no-repeat center/cover;">
+                            <div class="w-[150px] h-[350px] flex flex-col justify-around">
+                                <p class="text-[12px] font-bold text-white mb-2 pb-1 uppercase tracking-widest">
+                                    Collections</p>
+                                <a href="#" class="block text-[11px] py-2 hover:text-white font-semibold">HOME PAGE</a>
+                                <a href="#" class="block text-[11px] py-2 hover:text-white font-semibold">WINTER
+                                    COLLECTION</a>
+                                <a href="#" class="block text-[11px] py-2 hover:text-white font-semibold">TROUSERS</a>
+                                <a href="#" class="block text-[11px] py-2 hover:text-white font-semibold">SUMMER
+                                    COLLECTION</a>
+                                <a href="#" class="block text-[11px] py-2 hover:text-white font-semibold">SPRING
+                                    COLLECTION</a>
+                                <a href="#" class="block text-[11px] py-2 hover:text-white font-semibold">SKIRTS</a>
+                                <a href="#" class="block text-[11px] py-2 hover:text-white font-semibold">SHORTS</a>
+                            </div>
+                            <div class="w-[430px] h-[260px] flex justify-between">
+                                <div class="w-[200px] h-[200px]">
+                                    <img src="Assets/mega2-col1-img.jpg" class="w-[200px] h-[200px]">
+                                </div>
+                                <div class="w-[200px] h-[200px]">
+                                    <p
+                                        class="uppercase text-[11px] font-semibold text-[#fff] tracking-widest pt-[10px]">
+                                        End hunger lasting</p>
+                                    <p class="text-[11px] text-[#ccc] leading-[25px] pt-[20px]">Vaccines cause save the
+                                        world beneficiaries agency global environmental public sector recognition.</p>
+                                    <button class="text-[11px] text-[#ccc] font-bold pt-[16px]">Read more<i
+                                            class="ri-arrow-right-double-fill ps-[5px] text-[14px]"></i></button>
+                                </div>
+                            </div>
+                            <div class="w-[430px] h-[260px] flex justify-between">
+                                <div class="w-[200px] h-[200px]">
+                                    <img src="Assets/mega2-col2-img.jpg" class="w-[200px] h-[200px]">
+                                </div>
+                                <div class="w-[200px] h-[200px]">
+                                    <p
+                                        class="uppercase text-[11px] font-semibold text-[#fff] tracking-widest pt-[10px]">
+                                        End hunger lasting</p>
+                                    <p class="text-[11px] text-[#ccc] leading-[25px] pt-[20px]">Vaccines cause save the
+                                        world beneficiaries agency global environmental public sector recognition.</p>
+                                    <button class="text-[11px] text-[#ccc] font-bold pt-[16px]">Read more<i
+                                            class="ri-arrow-right-double-fill ps-[5px] text-[14px]"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#"
+                        class="text-[11px] text-[#fff] font-semibold hover:text-[#a7a4a4] tracking-wider">DEAL</a>
+                    <a href="#"
+                        class="text-[11px] text-[#fff] font-semibold hover:text-[#a7a4a4] tracking-wider">BLOG</a>
+                    <a href="#"
+                        class="text-[11px] text-[#fff] font-semibold hover:text-[#a7a4a4] tracking-wider">LOOKBOOK</a>
+                </div>
+                <div class="hamburger flex lg:hidden mr-[30px]">
+                    <i class="ri-menu-5-line text-[#fff] text-[30px]"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="dropnav w-full h-[300px] fixed bg-black top-[130px] z-50 text-[#fff] text-[12px] flex flex-col justify-evenly items-center md:items-start">
+            <a href="#" class="ps-[40px]">HOME</a>
+            <a href="#" class="ps-[40px]">SHOP</a>
+            <a href="#" class="ps-[40px]">TEMPLATES</a>
+            <a href="#" class="ps-[40px]">MEGA MENU</a>
+            <a href="#" class="ps-[40px]">DEAL</a>
+            <a href="#" class="ps-[40px]">BLOG</a>
+            <a href="#" class="ps-[40px]">LOOKBOOK</a>
+        </div>
+        
+        <div class="products w-full h-[233px] flex items-center justify-center">
+            <div class="subProdeucts w-[1170px] h-[136px] flex flex-col items-center justify-center gap-[12px]">
+                <p class="text-[24px] text-[#222] font-bold uppercase text-center">Products</p>
+                <div class="w-[1170px] h-[58px] flex items-center justify-center gap-[20px]">
+                    <a href="index.html" class="text-[12px] text-[#C7C7C7] font-bold hover:text-[#222]">HOME</a><i
+                        class="ri-arrow-right-s-line text-[#C7C7C7] font-bold"></i>
+                    <a href="#" class="text-[12px] text-[#C7C7C7] font-bold hover:text-[#222]">PRODUCTS</a><i
+                        class="ri-arrow-right-s-line text-[#C7C7C7] font-bold"></i>
+                    <a href="#" class="text-[12px] text-[#C7C7C7] font-bold hover:text-[#222]">PAGE 1 of 2</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-items-container w-full min-h-[400px] flex justify-center">
+            <div id="cart-items" class="w-full lg:w-[1170px] flex flex-col gap-4">
+              
+            </div>
+          </div>
+
+        <div class="newsletter relative w-full h-auto lg:h-[390px] bg-[url('Assets/footer_newsletter_bg.jpg')] bg-fixed bg-no-repeat bg-cover flex items-center justify-center">
+            <div class="absolute inset-0 hover:bg-[#000] opacity-20 duration-300"></div>
+            <div class="subNewsletter w-full lg:w-[1170px] h-auto lg:h-[390px] flex flex-col items-center justify-center gap-[25px] mt-[30px] lg:mt-0">
+                <div class="newsletterTtl w-full lg:w-[1170px] h-auto lg:h-[76px] flex flex-col items-center">
+                    <p class="text-[16px] lg:text-[22px] text-[#fff] font-bold uppercase tracking-wider">EMAIL FOR NEWSLETTER</p>
+                    <div class="line-container flex items-center justify-center mt-[20px]">
+                        <div class="line"></div>
+                        <div class="square"></div>
+                        <div class="line"></div>
+                    </div>
+                </div>
+                <div class="newsletterInfo w-full lg:w-[936px] h-auto lg:h-[50px]">
+                    <p class="text-[13px] text-[#ccc] font-semibold tracking-wide text-center italic p-[20px] lg:p-0">Nutrition, pursue
+                        these aspirations sanitation theory of social change liberal. Emergency response social
+                        challenges shifting landscape. Provide medicine, convener cornerstone meaningful work.</p>
+                </div>
+                <div class="newsletterEmail relative w-full lg:w-[468px] h-auto lg:h-[60px] border border-white flex ms-[10px] lg:ms-0">
+                    <input type="email" placeholder="Enter your email address...."
+                        class="w-full h-full bg-transparent text-[13px] ps-[20px] pr-[20px] font-medium text-[#ccc] placeholder:text-[#ccc] placeholder:text-[14px] outline-none pt-[20px] lg:pt-0">
+
+                    <div
+                        class="subscribe w-[150px] h-[60px] border border-white flex items-center justify-center cursor-pointer">
+                        <p class="text-[14px] uppercase text-[#fff] font-bold">Subscribe</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer w-full h-auto lg:h-[450px] bg-[#222222] flex items-center justify-center">
+            <div class="subFooter w-full lg:w-[1170px] h-auto lg:h-[320px] flex flex-col items-center justify-between">
+                <div class="footerLogo w-full lg:w-[1170px] h-auto lg:h-[55px] flex justify-center mt-[30px] lg:mt-0">
+                    <img src="Assets/footer_logo.png">
+                </div>
+                <div class="footerCont w-full lg:w-[1200px] h-auto lg:h-[220px] flex flex-col lg:flex-row justify-around ">
+                    <div class="about w-full lg:w-[500px] h-auto lg:h-[220px] mt-[30px] lg:mt-0">
+                        <p class="text-[18px] text-[#fff] font-semibold uppercase tracking-wider ps-[10px] text-center lg:text-left">About us</p>
+                        <p class="text-[13px] text-[#fff] font-semibold pt-[25px] ps-[10px] text-center lg:text-left">Peace reduce carbon
+                            emissions vaccine pride lasting <br>
+                            change. Diversification benefit inclusive capitalism <br>
+                            challenges of our times efficient</p>
+                        <div class="w-full lg:w-[435px] h-auto lg:h-[20px] ms-[10px] mt-[20px] flex items-center">
+                            <i class="ri-home-8-fill text-[#fff]"></i>
+                            <p class="text-[13px] text-[#fff] font-semibold ps-[20px]">249 Ung Van Khiem St.,Binh
+                                ThanhDist, HCM</p>
+                        </div>
+                        <div class="w-full lg:w-[435px] h-auto lg:h-[20px] ms-[10px] mt-[10px] flex items-center">
+                            <i class="ri-phone-fill text-[#fff]"></i>
+                            <p class="text-[13px] text-[#fff] font-semibold ps-[20px]">(+84) 123456789xxx</p>
+                        </div>
+                        <div class="w-full lg:w-[435px] h-auto lg:h-[20px] ms-[10px] mt-[10px] flex items-center mb-[20px] lg:mb-0">
+                            <i class="ri-mail-fill text-[#fff]"></i>
+                            <p class="text-[13px] text-[#fff] font-semibold ps-[20px] italic">support@kalatheme.com</p>
+                        </div>
+                    </div>
+                    <div class="account w-full lg:w-[400px] h-auto lg:h-[215px]">
+                        <p class="text-[18px] text-[#fff] font-semibold uppercase tracking-wider text-center lg:text-left">My Account</p>
+                        <div class="w-full lg:w-[400px] h-auto lg:h-[164px] flex mt-[22px] mb-[20px] lg:mb-0">
+                            <div class="w-[200px] h-[164px] flex flex-col justify-around ms-[30px] lg:ms-0">
+                                <a href="#"
+                                    class="text-[11px] text-[#fff] hover:text-[#8a8a8a] font-semibold tracking-wider uppercase">My
+                                    Account</a>
+                                <a href="#"
+                                    class="text-[11px] text-[#fff] hover:text-[#8a8a8a] font-semibold tracking-wider uppercase">Order
+                                    History</a>
+                                <a href="#"
+                                    class="text-[11px] text-[#fff] hover:text-[#8a8a8a] font-semibold tracking-wider uppercase">Wishlist</a>
+                                <a href="#"
+                                    class="text-[11px] text-[#fff] hover:text-[#8a8a8a] font-semibold tracking-wider uppercase">Privacy
+                                    policy</a>
+                                <a href="#"
+                                    class="text-[11px] text-[#fff] hover:text-[#8a8a8a] font-semibold tracking-wider uppercase">Delivery
+                                    information</a>
+                                <a href="#"
+                                    class="text-[11px] text-[#fff] hover:text-[#8a8a8a] font-semibold tracking-wider uppercase">Shopping
+                                    guide</a>
+                            </div>
+                            <div class="w-[200px] h-[109px] flex flex-col justify-around">
+                                <a href="#"
+                                    class="text-[11px] text-[#fff] hover:text-[#8a8a8a] font-semibold tracking-wider uppercase">Store
+                                    Location</a>
+                                <a href="#"
+                                    class="text-[11px] text-[#fff] hover:text-[#8a8a8a] font-semibold tracking-wider uppercase">Site
+                                    map</a>
+                                <a href="#"
+                                    class="text-[11px] text-[#fff] hover:text-[#8a8a8a] font-semibold tracking-wider uppercase">Newsletter</a>
+                                <a href="#"
+                                    class="text-[11px] text-[#fff] hover:text-[#8a8a8a] font-semibold tracking-wider uppercase">Contact
+                                    us</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo w-[270px] h-[20px] mb-[20px] lg:mb-0">
+                        <p class="text-[18px] text-[#fff] font-semibold uppercase tracking-wider text-center lg:text-left">Flickr Photo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright w-full bg-black flex items-center justify-center py-4">
+            <div class="subCopyright w-full max-w-7xl flex flex-col lg:flex-row items-center justify-between px-4">
+                <div class="flex flex-col w-full lg:w-3/4">
+                    <div class="flex flex-wrap items-center italic">
+                        <a href="#" class="text-[12px] text-white hover:text-gray-400 font-semibold tracking-wider">About</a>
+                        <span class="text-white mx-2">/</span>
+                        <a href="#" class="text-[12px] text-white hover:text-gray-400 font-semibold tracking-wider">Customer Service</a>
+                        <span class="text-white mx-2">/</span>
+                        <a href="#" class="text-[12px] text-white hover:text-gray-400 font-semibold tracking-wider">Privacy Policy Sitemap</a>
+                        <span class="text-white mx-2">/</span>
+                        <a href="#" class="text-[12px] text-white hover:text-gray-400 font-semibold tracking-wider">Search Terms</a>
+                        <span class="text-white mx-2">/</span>
+                        <a href="#" class="text-[12px] text-white hover:text-gray-400 font-semibold tracking-wider">Advanced Search</a>
+                        <span class="text-white mx-2">/</span>
+                        <a href="#" class="text-[12px] text-white hover:text-gray-400 font-semibold tracking-wider">Orders And Returns</a>
+                        <span class="text-white mx-2">/</span>
+                        <a href="#" class="text-[12px] text-white hover:text-gray-400 font-semibold tracking-wider">Contact Us</a>
+                    </div>
+                    <p class="text-xs text-white font-semibold pt-2">Copyright © 2025 Cosmetics Style 2 | All Rights Reserved</p>
+                </div>
+                <div class="icons flex items-center justify-around w-full lg:w-auto mt-4 lg:mt-0 gap-[10px]">
+                    <i class="ri-facebook-fill text-xl text-white hover:text-gray-300 cursor-pointer"></i>
+                    <i class="ri-twitter-fill text-xl text-white hover:text-gray-300 cursor-pointer"></i>
+                    <i class="fa-brands fa-google-plus-g text-xl text-white hover:text-gray-300 cursor-pointer"></i>
+                    <i class="ri-pinterest-fill text-xl text-white hover:text-gray-300 cursor-pointer"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="Jquery.js"></script>
+<script>
+    function getCartItems() {
+    const items = JSON.parse(localStorage.getItem('cartItems')) || [];
+    return items.map(item => ({ 
+        ...item, 
+        quantity: item.quantity || 1,
+        numericPrice: parseFloat(item.price.replace(/[^0-9.]/g, '')) 
+    }));
+}
+
+function displayCartItems() {
+    const cartItems = getCartItems();
+    const cartItemsContainer = document.getElementById('cart-items');
+
+    cartItemsContainer.innerHTML = '';
+
+    if (!cartItems || cartItems.length === 0) {
+        cartItemsContainer.innerHTML = '<p class="text-gray-500 text-xl">Your cart is empty.</p>';
+        return;
+    }
+
+    cartItems.forEach(product => {
+        const cartItem = document.createElement('div');
+        cartItem.className = 'cart-item flex flex-wrap lg:flex-nowrap items-center border p-4 rounded-lg shadow-md';
+
+        const itemTotal = product.numericPrice * product.quantity;
+
+        cartItem.innerHTML = `
+            <img src="${product.img}" alt="${product.title}" class="w-[200px] h-[200px] object-cover rounded-md">
+            <div class="text-left w-full lg:w-[700px] ms-0 lg:ms-[130px] mt-4 lg:mt-0">
+                <p class="text-xl font-semibold">${product.title}</p>
+                <p class="text-gray-600 text-lg">${product.price} (${product.quantity} × ₹${product.numericPrice})</p>
+                <p class="text-lg font-medium mt-1">Item Total: ₹${itemTotal.toFixed(2)}</p>
+                <div class="flex items-center gap-2 mt-2">
+                    <button onclick="updateQuantity('${product.title}', -1)" 
+                            class="px-3 py-1 bg-gray-100 rounded-lg">-</button>
+                    <span class="quantity">${product.quantity}</span>
+                    <button onclick="updateQuantity('${product.title}', 1)" 
+                            class="px-3 py-1 bg-gray-100 rounded-lg">+</button>
+                </div>
+            </div>
+            <button class="remove-from-cart text-red-500 hover:text-red-700 text-2xl mt-4 lg:mt-0" 
+                    onclick='removeFromCart("${product.title}")'>
+                <i class="ri-delete-bin-fill"></i>
+            </button>
+        `;
+
+        cartItemsContainer.appendChild(cartItem);
+    });
+
+    const grandTotal = cartItems.reduce((sum, item) => sum + (item.numericPrice * item.quantity), 0);
+    cartItemsContainer.innerHTML += `
+        <div class="grand-total border-t-2 pt-4 text-right">
+            <h3 class="text-2xl font-bold">Grand Total: ₹${grandTotal.toFixed(2)}</h3>
+        </div>
+    `;
+}
+
+function updateQuantity(title, change) {
+    let cartItems = getCartItems();
+    const index = cartItems.findIndex(item => item.title === title);
+    
+    if(index === -1) return;
+    
+    const newQty = cartItems[index].quantity + change;
+    
+    if(newQty < 1) {
+        cartItems = cartItems.filter(item => item.title !== title);
+    } else {
+        cartItems[index].quantity = newQty;
+    }
+    
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    displayCartItems(); 
+}
+
+function removeFromCart(title) {
+    const cartItems = getCartItems().filter(product => product.title !== title);
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    displayCartItems();
+}
+
+displayCartItems();
+
+$(document).ready(function() {
+    $(".dropnav").hide();
+    $(".hamburger").click(function() {
+        $(".dropnav").slideToggle();
+    });
+});
+
+</script>
+
+</html>

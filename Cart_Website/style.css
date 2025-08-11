@@ -1,0 +1,184 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Bitter&family=Montserrat&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    background-color: #222222;
+    border: 1px solid gray;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  #scrollToTop.show {
+    opacity: 1;
+  }
+  
+
+#title {
+    font-family: "Bitter", serif;
+    font-style: italic;
+}
+
+.heroSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+swiper-container::part(button-prev),
+swiper-container::part(button-next) {
+    display: none !important;
+}
+
+.custom-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 78px;
+    height: 78px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #666666;
+    font-size: 24px;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+.custom-arrow:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
+
+.product1,
+.produst2,
+.product3 {
+    position: relative;
+    overflow: hidden;
+}
+
+.product1::before,
+.produst2::before,
+.product3::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 1px solid white;
+    transition: all 0.5s ease-in-out;
+    transform: translate(-50%, -50%);
+}
+
+.product1:hover::before,
+.produst2:hover::before,
+.product3:hover::before {
+    width: 90%;
+    height: 90%;
+}
+
+.subProduct1,
+.subProduct2,
+.subProduct3 {
+    position: relative;
+    z-index: 2;
+}
+
+.line {
+    width: 40px;
+    height: 1px;
+    background-color: white;
+}
+
+.square {
+    width: 15px;
+    height: 15px;
+    border: 1px solid white;
+    background-color: transparent;
+    margin: 0 -1px;
+}
+
+.featureSlide {
+    font-size: 18px;
+    height: calc((100% - 30px) / 2) !important;
+  }
+
+  .featuredProCont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  /* style.css में यह कोड जोड़ें */
+.newArrivalsCont, .featuredProCont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.newArrivalsCont > div, .featuredProCont > div {
+    margin: 10px;
+}
+
+/* स्क्रॉल टू टॉप बटन के लिए */
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    background-color: #222222;
+    border: 1px solid gray;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+#scrollToTop.show {
+    opacity: 1;
+}
